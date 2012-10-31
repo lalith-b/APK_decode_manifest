@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="1" android:versionName="1.0" package="net.connectedu.statupdate"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-sdk android:minSdkVersion="14" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <application android:theme="@android:style/Theme.Light" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name=".StatUpdateApplication" android:debuggable="true">
+        <activity android:label="@string/app_name" android:name=".screen.LoginScreen" />
+        <activity android:label="@string/app_name" android:name=".screen.MarketHomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:label="@string/app_name" android:name=".screen.AppsListScreen" />
+        <receiver android:label="NetworkConnection" android:name=".receiver.ConnectionChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <service android:label="@string/app_service" android:name=".service.AppService" android:process=":process" />
+    </application>
+</manifest>
