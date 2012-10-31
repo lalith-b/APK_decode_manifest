@@ -31,7 +31,8 @@ var fs = require('fs');
 var SETTINGS = fs.readFileSync('./config/settings.json');
 	SETTINGS = JSON.parse(SETTINGS);
 	
-var ShellProvider = require('./shell_scripts/ShellProvider').ShellProvider;
+var ShellProvider = require('./providers/ShellProvider').ShellProvider;
+var SocketProvider = require('./providers/SocketProvider').SocketProvider;
 
 var PUBLIC = path.join(path.dirname(__filename), 'public');
 
@@ -53,7 +54,8 @@ http.createServer(function(req, res) {
   if(req.url == "/output/*"){
      console.log("loading url -- "+req.url);
   }
-    // parse an upload using formidable.
+
+// parse an upload using formidable.
   regex = new RegExp('/upload/(.+)');
   match = regex.exec(req.url);
   
