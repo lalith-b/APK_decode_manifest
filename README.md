@@ -10,39 +10,20 @@ to convert a pdf to an html document.
 
 ## Specification
 
-When the user picks a file from their computer and the form is submitted, the
+When the user picks a file from and the form is submitted, the
 upload begins. While uploading, the status text paragraph should be updating
 with the current percentage complete at least once every 2 seconds. While
 uploading, the user should be able to enter text into the title text field.
 
-When the upload completes, the pdf2htmlEX executable is triggered and
-the status text should display the path on the server to the saved file, 
-and the current value of the title text field should be posted to the server. 
-The response to the form post request should display both the title and the path 
-to the file.
+When the upload completes, the _APK DECODER is executed and converts the Binary XML to parsable XML_
 
 ## Features
 
-* To get all the list of files uploaded and converted access api
-  * http://host:port/get_list
-
-* To download the file access api
-  * http://host:port/output/yourfile.html (Got from the above api) 
+-- TO BE FILLED SOON
 
 ## Installation Notes
 
-* Step 1 
-	* Install Macports		-	for mac 
-	* Install yum,apt-get etc 	-	for linux	   
-* Step 2 	
- *  Install GCC > 4.4.6 and above
- *  Select GCC 4.7(preffered)  and above using	 - $sudo port select --list gcc
-                                                 
-* Step 3 : Install CMake,make,pkg-config
-* Step 4 : Install poppler 0.20.4 +
-* Step 5 : Install fontforge
-* Step 6 : Install pdftohtmlEX		
-* Step 7 : After Compilation test completely for pdf-html conversion.
+-- TO BE FILLED SOON
 
 
 ## Dependancies
@@ -53,23 +34,10 @@ to the file.
 
 [**paperboy.js**](https://github.com/felixge/node-paperboy)
 
-[**pdf2htmlEX and its dependancies**](https://github.com/coolwanglu/pdf2htmlEX)
-
 
 ## FAQ's
 
-* Incase your compiler doesnt support round function, Edit the round code in text.cc in pdf2htmlEX to create a function like below.
-
-##
-
-       int round(double number){
-         	return (number >= 0) ? (int)(number + 0.5) : (int)(number - 0.5);
-       }
-
-* To select the preferred gcc,
-
-  * Use $sudo port select -list gcc
-  * $sudo port select -set gcc
+-- IF Any please mail me.
 
 ## Copyrights
 

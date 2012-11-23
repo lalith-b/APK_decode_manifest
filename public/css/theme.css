@@ -1,0 +1,198 @@
+/* ----- Logo ----- */
+
+#logo a {
+	background-image:url('../images/somelogo.png'); 
+	min-height:0;
+	height:40px;
+}
+* html #logo a {/* IE6 png Support */
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="../images/sompng.png", sizingMethod="crop");
+}
+
+/* ----- Backgrounds ----- */
+html{
+	background-image:none;	background-color:#FFFFFF;
+}
+#logo{
+	background-image:none;	background-color:#DEDEDE;
+}
+#container, html.embed{
+	background-color:#FFFFFF;
+}
+.safari .apkuploader input.file{
+	background:none;
+	border:none;
+}
+
+.apkuploader li.focused{
+	background-color:#FFF7C0;
+}
+.apkuploader .instruct{
+	background-color:#F5F5F5;
+}
+
+/* ----- Borders ----- */
+#container{
+	border:1px solid #CCCCCC;
+}
+.apkuploader .info, .apkuploader .paging-context{
+	border-bottom:1px dotted #CCCCCC;
+}
+.apkuploader .section h3, .apkuploader .captcha, #payment .paging-context{
+	border-top:1px dotted #CCCCCC;
+}
+.apkuploader input.text, .apkuploader textarea.textarea{
+
+}
+.apkuploader .instruct{
+	border:1px solid #E6E6E6;
+}
+.fixed .info{
+	border-bottom:none;
+}
+.apkuploader li.section.scrollText{
+	border-color:#dedede;
+}
+
+/* ----- Typography ----- */
+.apkuploader .info h2{
+	font-size:160%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#000000;
+}
+.apkuploader .info div{
+	font-size:95%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#444444;
+}
+.apkuploader .section h3{
+	font-size:110%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#000000;
+}
+.apkuploader .section div{
+	font-size:85%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#444444;
+}
+
+.apkuploader label.desc, .apkuploader legend.desc{
+	font-size:95%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:bold;
+	color:#444444;
+}
+
+.apkuploader label.choice{
+	font-size:100%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#444444;
+}
+.apkuploader input.text, .apkuploader textarea.textarea, .apkuploader input.file, .apkuploader select.select{
+	font-style:normal;
+	font-weight:normal;
+	color:#333333;
+	font-size:100%;
+}
+{* Custom Fonts Break Dropdown Selection in IE *}
+.apkuploader input.text, .apkuploader textarea.textarea, .apkuploader input.file{ 
+	font-family:inherit;
+}
+
+
+.apkuploader li div, .apkuploader li span, .apkuploader li div label, .apkuploader li span label{
+	font-family:inherit;
+	color:#444444;
+}
+.safari .apkuploader input.file{ /* Webkit */
+	font-size:100%;
+	font-family:inherit;
+	color:#444444;
+}
+.apkuploader .instruct small{
+	font-size:85%;
+	font-family:inherit;
+	font-style:normal;
+	font-weight:normal;
+	color:#444444;
+}
+
+.altInstruct small, li.leftHalf small, li.rightHalf small,
+li.leftThird small, li.middleThird small, li.rightThird small,
+.iphone small{
+	color:#444444 !important;
+}
+
+/* ----- Button Styles ----- */
+
+.apkuploader input.btTxt{
+
+}
+
+/* ----- Highlight Styles ----- */
+
+.apkuploader li.focused label.desc, .apkuploader li.focused legend.desc,
+.apkuploader li.focused div, .apkuploader li.focused span, .apkuploader li.focused div label, .apkuploader li.focused span label,
+.safari .apkuploader li.focused input.file{ 
+	color:#000000;
+}
+
+
+/* ----- Running Total ----- */
+
+.apkuploader #lola{
+	background:#e6e6e6;
+}
+.apkuploader #lola tbody td{
+	border-bottom:1px solid #cccccc;
+}
+.apkuploader #lola{
+	font-family:inherit;
+	color:#444444;
+}
+.apkuploader #lola tfoot th{
+	color:#696969;
+}
+
+/* ----- Report Styles ----- */
+
+.apkuploader .wfo_graph h3{
+	font-size:95%;
+	font-family:inherit;
+	color:#444444;
+}
+.wfo_txt, .wfo_graph h4{
+	color:#444444;
+}
+.apkuploader .footer h4{
+	color:#000000;
+}
+.apkuploader .footer span{
+	color:#444444;
+}
+
+
+/* Drop Shadows */
+
+@media only screen and (max-width: 480px) {
+	html{
+		background-color:#FFFFFF;
+	}
+	a.powertiny b, a.powertin em{
+		color:#1a1a1a !important;
+	}
+}
+
+/* - - - Custom Theme - - - */
