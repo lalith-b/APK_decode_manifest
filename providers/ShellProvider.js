@@ -71,24 +71,30 @@ ShellProvider.prototype.execute_conversion = function(files,callback){
 	  shell.exec('rm -rf '+SETTINGS.output_folder+filename.replace(".apk",""));
   	  shell.exec('rm -rf '+SETTINGS.output_folder+filename.replace(".apk",".zip"));	  
 
-	  var outputJson;
+	
 	  fs.readFile(SETTINGS.output_folder+'/AndroidManifest.xml','utf8', function (err, data) {
-		  if (err) throw err;
-	 	  console.log('XML\n');
-	 	  console.log(data);
-		  outputJson = xml2json.load(data);	  
-	 	  console.log('JSON \n');
-		  console.log(outputJson.manifest);
-	  });
-
-  	  
-	  if(status.code == 0){
+		if (err) throw err;
+		  var outputJson;
+		
+	 	console.log('XML\n');
+	 	console.log(data);
+		outputJson = xml2json.load(data);	  
+	 	console.log('JSON \n');
+		
+		delete outputJson.manifest['application'];
+		delete outputJson.manifest['xmlns$android'];
+		
+		console.log(outputJson.manifest);
+		
+		if(status.code == 0){
 		  console.log("\n\nSuccessful Conversion\n");
-		  callback(JSON.stringify({"status":"success","manifest":outputJson,"errors":null}))		  
-	  }else{
+		  callback(JSON.stringify({"status":"success","manifest":outputJson.manifest,"errors":null}))		  
+		}else{
 		  callback(JSON.stringify({"status":"failed","manifest":outputJson,"errors":status.output}))
-	  }
-	      
+		}
+		
+	  });
+	
 }
 
 exports.ShellProvider = ShellProvider;

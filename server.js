@@ -41,20 +41,6 @@ var metadata   = {}
 
 http.createServer(function(req, res) {
 
-//   if(req.url == "/get_list" && req.method.toLowerCase() == 'post'){  
-  if(req.url == "/get_list"){
-	  var shellProvider = new ShellProvider();
-	  shellProvider.get_files(function(results) {
-		  res.writeHead(200,{'Content-Type':'application/json'});	  
-		  res.write(results);
-		  res.end();
-	  });	  
-  }
-  
-  if(req.url == "/output/*"){
-     console.log("loading url -- "+req.url);
-  }
-
 // parse an upload using formidable.
   regex = new RegExp('/upload/(.+)');
   match = regex.exec(req.url);
